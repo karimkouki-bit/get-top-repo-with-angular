@@ -1,0 +1,28 @@
+<div class="Row">
+  <div class="dev-left">
+
+          <span class="Row-repo mrg-r-2">{{devItem?.rank}}</span>
+          <img class="row-built-by-img" src={{devItem?.avatar}} alt={{devItem?.username}}/>
+          <span class="Row-h2 mrg-l-4">{{devItem?.username}} </span>
+          <br>
+          <span class="text-font mrg-l-19">{{devItem?.name}} </span>
+
+  </div>
+  <div class="dev-middle">
+          <span class="Row-repo">
+            <span class="material-icons-round repo-badge">verified_user</span>
+            POPULAR REPO
+          </span>
+            <div>
+              <span class="Row-repo"><span class="material-icons-sharp">report_problem</span> </span>
+              <span class="Row-h2"> {{devItem?.popularRepository?.repositoryName}} </span>
+          </div>
+          <p class="text-font"> {{devItem?.popularRepository?.description}} </p>
+  </div>
+  <div class="dev-right">
+    <Button type="button" class="btn btn-secondary btn-sm mrg-r-10">
+      <span class="material-icons-sharp">star_border</span>
+      Sponsor </Button>
+    <Button type="button" class="btn btn-secondary btn-sm"> Follow </Button>
+  </div>
+</div>

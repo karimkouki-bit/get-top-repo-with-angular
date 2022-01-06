@@ -1,0 +1,28 @@
+<div class="Row">
+  <div class="Row-left">
+      <div>
+          <span class="Row-repo"><span class="material-icons-sharp">report_problem</span></span>
+          <span class="Row-h2">{{repoItem?.repositoryName}} </span>
+      </div>
+      <p class="text-font mrg-l-2"> {{repoItem?.description}} </p>
+      <div>
+          <span class="text-font mrg-2">{{repoItem?.language}}</span>
+          <span class="text-font mrg-2">
+            <span class="material-icons-sharp">star_border</span> {{repoItem?.totalStars}}
+          </span>
+          <span class="text-font mrg-2">
+            <span class="material-icons-sharp">fork_right</span> {{repoItem?.forks}}
+          </span>
+          <span class="text-font mrg-2">
+            builtBy <span *ngFor="let item of repoItem?.builtBy">
+              <img class="row-built-by-img" src="{{item.avatar}}" alt="{{item.username}}"/>
+            </span>
+          </span>
+      </div>
+  </div>
+  <div class="Row-right">
+    <Button class="mrg-r-10" type="button" class="btn btn-secondary btn-sm">
+      <span class="material-icons-sharp">star_border</span> Sponsor
+    </Button>
+  </div>
+</div>
